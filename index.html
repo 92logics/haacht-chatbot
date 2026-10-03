@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haacht — scripted municipal chatbot prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#composer">Naar het invoerveld</a>
+  <header class="top">
+    <div class="brand">
+      <p class="eyebrow">92 Logics prototype · not a bid</p>
+      <h1>Haacht <span lang="nl">gescripte gemeentelijke chatbot</span></h1>
+      <p class="lede" id="lede"></p>
+    </div>
+    <div class="controls">
+      <span class="badge" id="mode-badge">Scripted · no live AI</span>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-nl" aria-pressed="true">NL</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="chat" aria-labelledby="chat-title">
+      <h2 id="chat-title" class="visually-hidden">Chat</h2>
+      <div id="log" class="log" role="log" aria-live="polite"></div>
+      <div class="chips" id="chips"></div>
+      <form id="composer" class="composer">
+        <label class="visually-hidden" for="q" id="q-label">Vraag</label>
+        <textarea id="q" rows="2" autocomplete="off"></textarea>
+        <button type="submit" id="send">Verstuur</button>
+      </form>
+    </section>
+    <aside class="side">
+      <h2 id="side-title">Bronnen in dit script</h2>
+      <ul id="sources"></ul>
+      <p id="side-note"></p>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    Prototype by 92 Logics · cowork@92logics.com · not an official municipal system.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
